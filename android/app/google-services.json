@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "508878363318",
+    "project_id": "meddiary-829f7",
+    "storage_bucket": "meddiary-829f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508878363318:android:4c8685498a9a1f45596417",
+        "android_client_info": {
+          "package_name": "com.example.med_diary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKSmhsBhB679-ZORf-to1vig3mm8N9K5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
