@@ -1,6 +1,10 @@
 # med_diary
 
+#### Video Demo:  <URL https://youtu.be/Q4DHB3vHX74>
+#### Description: MEDdiary is a cross-platform mobile app built with Flutter for recording blood pressure and blood glucose levels daily and calculating their average. 
+
 A new Flutter project.
+
 
 ## Getting Started
 
