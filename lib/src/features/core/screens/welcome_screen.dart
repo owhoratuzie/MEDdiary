@@ -41,7 +41,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 // This is the function to handle theme change, which should be passed to HomeScreen
   void _onThemeChange(ThemeMode newThemeMode) {
     // Implement theme change logic here, for example:
-    print('Theme changed to: $newThemeMode');
+    //print('Theme changed to: $newThemeMode');
   }
 
   void _navigateToHome() {
@@ -61,6 +61,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     const double padding = 21.0;
     const double textFieldHeight = 45.0;
 
+    final textTheme = Theme.of(context).textTheme;
+
     return Scaffold(
       body: SizedBox(
         height: screenHeight,
@@ -71,32 +73,30 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(padding),
-                    child: Text(
-                      "Welcome",
-                      style: GoogleFonts.outfit(
-                        textStyle: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 30,
-                          letterSpacing: -1.0,
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(padding),
+                      child: Text(
+                        "MEDdiary",
+                        style: GoogleFonts.outfit(
+                          textStyle: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 30,
+                            letterSpacing: -1.0,
+                          ),
                         ),
                       ),
                     ),
                   ),
                   Padding(
+                    padding: const EdgeInsets.all(padding),
+                    child: Text("Welcome", style: textTheme.headlineMedium),
+                  ),
+                  Padding(
                     padding: const EdgeInsets.only(
                       left: padding,
                     ),
-                    child: Text(
-                      "Username",
-                      style: GoogleFonts.outfit(
-                        textStyle: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 10,
-                        ),
-                      ),
-                    ),
+                    child: Text("Username", style: textTheme.bodySmall),
                   ),
                   Center(
                     child: Container(
@@ -117,15 +117,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     padding: const EdgeInsets.only(
                       left: padding,
                     ),
-                    child: Text(
-                      "When were you born?",
-                      style: GoogleFonts.outfit(
-                        textStyle: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 10,
-                        ),
-                      ),
-                    ),
+                    child:
+                        Text("When were you born?", style: textTheme.bodySmall),
                   ),
                   Center(
                     child: Container(

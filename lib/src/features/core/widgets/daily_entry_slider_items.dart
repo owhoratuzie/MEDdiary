@@ -22,20 +22,48 @@ class _DailyEntrySlider2State extends State<DailyEntrySlider2> {
 
   // Save data to database
   Future<void> _saveData() async {
+    String message = '';
+
     if (_currentPage == 0) {
       // Save blood pressure
       int systolic = int.parse(_systolicController.text);
       int diastolic = int.parse(_diastolicController.text);
       await DatabaseHelper().insertBloodPressure(
           systolic, diastolic, DateTime.now().toIso8601String());
-      print("Blood Pressure saved!");
+      message = "Blood Pressure saved!";
+
+      // Clear input fields
+      _systolicController.clear();
+      _diastolicController.clear();
     } else if (_currentPage == 1) {
       // Save blood glucose
       int glucoseLevel = int.parse(_glucoseLevelController.text);
       await DatabaseHelper().insertBloodGlucose(
           glucoseLevel, 'mg/dL', DateTime.now().toIso8601String());
-      print("Blood Glucose saved!");
+      message = "Blood Glucose saved!";
+
+      // Clear input fields
+      _glucoseLevelController.clear();
     }
+
+    // Show confirmation dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Success"),
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: const Text("OK"),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -48,7 +76,7 @@ class _DailyEntrySlider2State extends State<DailyEntrySlider2> {
     //const double padding = 21.0;
     const double textFieldHeight = 45.0;
 
-    final textTheme = Theme.of(context).textTheme;
+    //final textTheme = Theme.of(context).textTheme;
 
     return Column(
       children: [

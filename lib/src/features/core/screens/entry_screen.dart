@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
 import 'package:med_diary/src/features/core/widgets/custom_app_bar.dart';
 import 'package:med_diary/src/features/core/widgets/daily_entry_slider.dart';
 //import 'package:med_diary/src/features/core/widgets/daily_entry_slider_items.dart';
 import 'package:med_diary/src/features/core/widgets/greetings.dart';
-import 'package:med_diary/src/theme/widget_themes/text_theme.dart';
+//import 'package:med_diary/src/theme/widget_themes/text_theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class EntryScreen extends StatefulWidget {

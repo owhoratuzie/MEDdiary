@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:med_diary/src/features/core/widgets/custom_app_bar.dart';
-import 'package:med_diary/src/theme/widget_themes/text_theme.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+//import 'package:med_diary/src/theme/widget_themes/text_theme.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsScreen extends StatefulWidget {
   final void Function(ThemeMode) onThemeChange;
